@@ -10,9 +10,9 @@ public class Snack1 {
 		int number = sc.nextInt();
 		
 		System.out.println(
-		number % 2 == 0
-				? number
-				: ++number
+				number % 2 == 0
+					? number
+					: ++number
 		);
 
 		sc.close();

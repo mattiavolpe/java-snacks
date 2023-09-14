@@ -9,12 +9,12 @@ public class Snack1 {
 		System.out.print("Type a number: ");
 		int number = sc.nextInt();
 		
+		sc.close();
+		
 		System.out.println(
 				number % 2 == 0
 					? number
 					: ++number
 		);
-
-		sc.close();
 	}
 }

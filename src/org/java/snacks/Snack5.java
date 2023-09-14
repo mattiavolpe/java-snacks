@@ -11,7 +11,7 @@ public class Snack5 {
 			System.out.print("Insert a sentence or a word: ");
 			sentence = sc.nextLine();
 			
-			if (sentence.trim().equals("0")) return;
+			if (sentence.trim().equals("0")) break;
 			
 			int alphabeticalCounter = 0;
 			int numericCounter = 0;
@@ -32,6 +32,8 @@ public class Snack5 {
 			}
 			
 			System.out.println("The word / sentence " + sentence + " has: " + alphabeticalCounter + " alphabetical characters, " + numericCounter + " numbers and " + symbolsCounter + " symbols");
-		} while (!sentence.trim().equals("0")); // while (true) ALSO WORKS BECAUSE OF THE return AT ROW 14
+		} while (!sentence.trim().equals("0"));
+		
+		sc.close();
 	}
 }

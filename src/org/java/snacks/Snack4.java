@@ -10,6 +10,8 @@ public class Snack4 {
 		
 //		NOT REVERSING HERE BECAUSE WE WANT TO KEET THE ORIGINAL INPUT TO SHOW IT AT THE END OF THE CODE
 		String sentence = sc.nextLine();
+		
+		sc.close();
 
 //		USING replaceAll TO REMOVE ALL THE SPACES
 		String sentenceToReverse = sentence.toLowerCase().replaceAll("\\s+", "");

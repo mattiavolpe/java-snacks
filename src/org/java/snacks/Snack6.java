@@ -14,44 +14,19 @@ public class Snack6 {
 		long number = 0L;
 		long power = 1L;
 		
+		char[] digits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+		
 		for (int i = numericString.length() - 1; i >= 0; i--) {
 			char currentNumericChar = numericString.charAt(i);
 			
-			if (i != numericString.length() - 1) {
-				power *= 10L;
+			for (int j = 1; j < digits.length; j++) {
+				if (currentNumericChar == digits[j]) {
+					number += j * power;
+				}
 			}
 			
-			switch(currentNumericChar) {
-				case '1':
-					number += 1 * power;
-					break;
-				case '2':
-					number += 2 * power;
-					break;
-				case '3':
-					number += 3 * power;
-					break;
-				case '4':
-					number += 4 * power;
-					break;
-				case '5':
-					number += 5 * power;
-					break;
-				case '6':
-					number += 6 * power;
-					break;
-				case '7':
-					number += 7 * power;
-					break;
-				case '8':
-					number += 8 * power;
-					break;
-				case '9':
-					number += 9 * power;
-					break;
-				default:
-					break;
-			}
+			power *= 10L;
+			
 		}
 		System.out.println(number);
 	}

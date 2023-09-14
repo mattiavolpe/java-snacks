@@ -8,18 +8,28 @@ public class Snack4 {
 		
 		System.out.print("Insert a sentence or a word: ");
 		
-//		Not reversing here because we want to keep the original input to show it at the end of the code
+//		NOT REVERSING HERE BECAUSE WE WANT TO KEET THE ORIGINAL INPUT TO SHOW IT AT THE END OF THE CODE
 		String sentence = sc.nextLine();
 
-//		Using replaceAll to remove all the spaces
+//		USING replaceAll TO REMOVE ALL THE SPACES
 		String sentenceToReverse = sentence.toLowerCase().replaceAll("\\s+", "");
 		
-		String reversedString = new StringBuilder(sentenceToReverse).reverse().toString();
+//		SOLUTION WITH THE REVERSE METHOD
+//		String reversedString = new StringBuilder(sentenceToReverse).reverse().toString();
 		
-		System.out.println(
-				sentenceToReverse.equals(reversedString)
-				? "The word / sentence " + sentence + " IS palindrome"
-				: "The word / sentence " + sentence + " IS NOT palindrome"
-		);
+//		System.out.println(
+//			sentenceToReverse.equals(reversedString)
+//			? "The word / sentence " + sentence + " IS palindrome"
+//			: "The word / sentence " + sentence + " IS NOT palindrome"
+//		);
+	
+		for (int i = 0; i < sentenceToReverse.length() / 2; i++) {
+			if (sentenceToReverse.charAt(i) != sentenceToReverse.charAt(sentenceToReverse.length() - i - 1)) {
+				System.out.println("The word / sentence " + sentence + " IS NOT palindrome");
+				return;
+			}
+		}
+		
+		System.out.println("The word / sentence " + sentence + " IS palindrome");
 	}
 }

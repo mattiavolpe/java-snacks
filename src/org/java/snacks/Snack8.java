@@ -32,7 +32,7 @@ public class Snack8 {
 			sum += currentNumber;
 		}
 		
-		float avg = sum / 10;
+		float avg = (float) sum / 10;
 		
 		System.out.println("Min: " + min);
 		System.out.println("Max: " + max);
